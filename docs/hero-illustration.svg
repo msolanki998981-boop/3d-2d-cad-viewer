@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Gradients -->
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Grid with 3D Perspective -->
+  <g transform="scale(1.5) translate(-100, -100)">
+    <rect width="100%" height="100%" fill="url(#grid)" transform="scale(1, 0.5) skewX(-45) translate(400, 400)" />
+  </g>
+  <circle cx="400" cy="300" r="300" fill="url(#glow)" filter="blur(60px)"/>
+
+  <!-- Isometric Device / Tablet Frame -->
+  <g transform="translate(400, 320) scale(1.2)" filter="url(#shadow)">
+    <!-- Main Body -->
+    <path d="M0 -100 L180 -10 L0 80 L-180 -10 Z" fill="#1e293b" stroke="#334155" stroke-width="4" stroke-linejoin="round"/>
+    <!-- Screen -->
+    <path d="M0 -90 L160 -10 L0 70 L-160 -10 Z" fill="#0f172a"/>
+    <!-- Screen Grid -->
+    <path d="M-80 -50 L80 30 M-40 -70 L120 10 M-120 -30 L40 50 M-140 -10 L0 -80 M-100 10 L40 -60 M-60 30 L80 -40 M-20 50 L120 -20" stroke="rgba(59,130,246,0.3)" stroke-width="1.5"/>
+
+    <!-- 3D Object Floating above Screen -->
+    <g transform="translate(0, -70)">
+      <!-- Projection Lines -->
+      <path d="M0 -60 L0 30 M-60 -30 L-60 0 M60 -30 L60 0" stroke="rgba(96,165,250,0.5)" stroke-dasharray="4,4" stroke-width="2"/>
+
+      <!-- Top Face -->
+      <path d="M0 -90 L60 -60 L0 -30 L-60 -60 Z" fill="url(#primaryGrad)" opacity="0.9"/>
+      <!-- Right Face -->
+      <path d="M0 -30 L60 -60 V0 L0 30 Z" fill="#2563eb" opacity="0.8"/>
+      <!-- Left Face -->
+      <path d="M0 -30 L-60 -60 V0 L0 30 Z" fill="#1e40af" opacity="0.9"/>
+      <!-- Edges -->
+      <path d="M0 -90 L60 -60 V0 L0 30 V-30 M60 -60 L0 -30 L-60 -60 M-60 0 L0 30 M0 -90 L-60 -60 V0" stroke="#93c5fd" stroke-width="2" stroke-linejoin="round"/>
+
+      <!-- Nodes -->
+      <circle cx="0" cy="-90" r="4" fill="#fff"/>
+      <circle cx="60" cy="-60" r="4" fill="#fff"/>
+      <circle cx="-60" cy="-60" r="4" fill="#fff"/>
+      <circle cx="0" cy="-30" r="4" fill="#fff"/>
+      <circle cx="0" cy="30" r="4" fill="#fff"/>
+      <circle cx="60" cy="0" r="4" fill="#fff"/>
+      <circle cx="-60" cy="0" r="4" fill="#fff"/>
+    </g>
+
+    <!-- UI Elements on screen -->
+    <g transform="translate(-130, -10)">
+      <rect x="0" y="0" width="40" height="8" fill="#3b82f6" rx="4" transform="skewY(26.5)"/>
+      <rect x="0" y="15" width="30" height="8" fill="#475569" rx="4" transform="skewY(26.5)"/>
+      <rect x="0" y="30" width="35" height="8" fill="#475569" rx="4" transform="skewY(26.5)"/>
+    </g>
+    <g transform="translate(90, -10)">
+      <circle cx="20" cy="10" r="15" fill="#3b82f6" opacity="0.2" transform="scale(1, 0.5) skewX(-45)"/>
+      <circle cx="20" cy="10" r="8" fill="#3b82f6" transform="scale(1, 0.5) skewX(-45)"/>
+    </g>
+  </g>
+
+  <!-- Floating UI Elements -->
+  <g filter="url(#shadow)">
+    <!-- Tooltip / Info Box 1 -->
+    <g transform="translate(150, 150)">
+      <rect x="0" y="0" width="160" height="50" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <circle cx="25" cy="25" r="10" fill="#10b981"/>
+      <path d="M21 25 L24 28 L29 21" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="50" y="15" width="80" height="6" rx="3" fill="#94a3b8"/>
+      <rect x="50" y="30" width="50" height="6" rx="3" fill="#475569"/>
+    </g>
+
+    <!-- Tooltip / Info Box 2 -->
+    <g transform="translate(550, 420)">
+      <rect x="0" y="0" width="140" height="60" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+      <circle cx="115" cy="30" r="15" fill="#3b82f6"/>
+      <path d="M110 30 L120 30 M115 25 L115 35" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      <rect x="20" y="20" width="60" height="6" rx="3" fill="#94a3b8"/>
+      <rect x="20" y="35" width="40" height="6" rx="3" fill="#475569"/>
+    </g>
+  </g>
+</svg>

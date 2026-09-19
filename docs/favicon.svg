@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <g transform="translate(10, 10)">
+    <path d="M50 5 L95 28 V78 L50 100 L5 78 V28 L50 5Z" fill="url(#grad1)"/>
+    <path d="M50 5 L95 28 L50 50 L5 28 Z" fill="url(#grad2)"/>
+    <path d="M50 50 L95 28 V78 L50 100 Z" fill="url(#grad3)"/>
+    <path d="M5 28 L50 50 V100 L5 78 Z" fill="url(#grad4)"/>
+    <!-- Wireframe overlay -->
+    <path d="M50 5 L95 28 V78 L50 100 L5 78 V28 L50 5Z M50 5 L50 50 M95 28 L50 50 M5 28 L50 50 M50 50 V100" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" opacity="0.6"/>
+  </g>
+  <defs>
+    <linearGradient id="grad1" x1="50" y1="5" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="50" y1="5" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="grad3" x1="50" y1="28" x2="95" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="grad4" x1="5" y1="28" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+</svg>
